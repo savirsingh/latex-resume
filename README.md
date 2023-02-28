@@ -1,2 +1,3 @@
-# latex-resume
-My free, open-source résumé.
+# LaTeX Résumé
+### My free, open-source résumé.
+
