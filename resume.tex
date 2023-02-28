@@ -1,0 +1,98 @@
+% By Savir Singh
+% Savir's Current Resume
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{fontawesome}
+\newcommand{\github}{\faGithub}
+\usepackage{tikz}
+\usepackage[super]{nth}
+
+\newcommand{\skilltag}[1]{\tikz{\node[rounded corners=2pt,fill=blue!64,text=white]{\textbf{#1}};}}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\titleformat{\section}
+  {\large\scshape\raggedright}
+  {}{0em}
+  {}[\titlerule]
+
+\setlist[itemize]{leftmargin=*}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\raggedright
+    {\LARGE \textbf{Savir Singh}} \\ \vspace{2mm}
+    \small
+    \href{mailto:kopichiki@gmail.com}{kopichiki@gmail.com}
+    $\vert$ \href{https://savirsingh.github.io}{savirsingh.github.io}
+    $\vert$ \href{https://github.com/savirsingh}{\github}
+
+%----------------------------------------------------------
+%Work Experience
+\section{Experience}
+\begin{itemize}[label=,leftmargin=*]
+    \itemsep0em 
+    \item \textbf{Volunteer Programming Tutor}, My Code Club
+    \item \textit{February 2023 - Present}
+    \item \textsc{Mississauga, ON - Remote}
+    \item Description: Volunteering while helping to teach youth aged 4-13 how to build apps.
+
+    \skilltag{App Inventor} \skilltag{Programming}
+\end{itemize}
+
+\begin{itemize}[label=,leftmargin=*]
+    \itemsep0em 
+    \item \textbf{Pre-Season Programming Learning Group}, Chargers Robotics
+    \item \textit{October 2022 - December 2022}
+    \item \textsc{Oakville, ON}
+    \item Description: Understanding how robotics works while working with one of Ontario’s top
+    award-winning robotics teams.
+
+
+    \skilltag{Control Systems} \skilltag{Programming}
+\end{itemize}
+
+%----------------------------------------------------------
+%Education
+\section{Education}
+\begin{itemize}[label=,leftmargin=*]
+    \itemsep0em 
+    \item \textbf{Ontario Secondary School Diploma}, Garth Webb Secondary School
+    \item \textit{2021 - 2025 (projected)}
+    \item Listed on honour roll in Grade 9.
+\end{itemize}
+
+%----------------------------------------------------------
+%Skills
+\section{Skills}
+\begin{itemize}[label=,leftmargin=*]
+    \itemsep0em 
+    \item \skilltag{Python}
+    \skilltag{C/C++}
+    \skilltag{Web Dev}
+    \skilltag{Server Management}
+\end{itemize}
+
+%----------------------------------------------------------
+%Achievements & Awards
+\section{Achievements And Awards}
+\begin{itemize}[label=,leftmargin=*]
+    \itemsep0em 
+    \item \textbf{\nth{1} Place}, PEO-MC High School Coding Contest
+    \item \textit{2021, 2022}
+    \item Description: In Grade 9 and 10.
+\end{itemize}
+
+\end{document}
