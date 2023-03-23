@@ -1,98 +1,60 @@
 % By Savir Singh
 % Savir's Current Resume
 
-\documentclass[letterpaper,10pt]{article}
-
-\usepackage{fontawesome}
-\newcommand{\github}{\faGithub}
-\usepackage{tikz}
+\documentclass[10pt,a4paper,sans]{moderncv} 
 \usepackage[super]{nth}
 
-\newcommand{\skilltag}[1]{\tikz{\node[rounded corners=2pt,fill=blue!64,text=white]{\textbf{#1}};}}
 
-\usepackage[margin=0.6in]{geometry}
-\usepackage{enumitem}
-\usepackage{titlesec}
-\usepackage{hyperref}
+% moderncv themes
+\moderncvstyle{banking} % classic, banking, casual, oldstyle, fancy
+\moderncvcolor{blue}
 
-\titleformat{\section}
-  {\large\scshape\raggedright}
-  {}{0em}
-  {}[\titlerule]
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
 
-\setlist[itemize]{leftmargin=*}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=blue,
-}
+% personal data
+\name{Savir}{Singh}
+\address{Oakville, ON}{Canada}
+\email{savirsinghwork@gmail.com}
+\homepage {savirsingh.github.io}
+\social[github]{savirsingh}
 
 \begin{document}
+\hypersetup{pdftitle={Savir's Résumé}} % <====================================
 
-\pagenumbering{gobble}
+\makecvtitle
 
-\raggedright
-    {\LARGE \textbf{Savir Singh}} \\ \vspace{2mm}
-    \small
-    \href{mailto:kopichiki@gmail.com}{kopichiki@gmail.com}
-    $\vert$ \href{https://savirsingh.github.io}{savirsingh.github.io}
-    $\vert$ \href{https://github.com/savirsingh}{\github}
+\section{Summary}
+\cvitem{}{Innovative web and software developer with 3+ years of experience in building full-stack applications. Experienced in competitive programming, having written and won some algorithmic contests as well.}
 
-%----------------------------------------------------------
-%Work Experience
-\section{Experience}
-\begin{itemize}[label=,leftmargin=*]
-    \itemsep0em 
-    \item \textbf{Volunteer Programming Tutor}, My Code Club
-    \item \textit{February 2023 - Present}
-    \item \textsc{Mississauga, ON - Remote}
-    \item Description: Volunteering while helping to teach youth aged 4-13 how to build apps.
-
-    \skilltag{App Inventor} \skilltag{Programming}
-\end{itemize}
-
-\begin{itemize}[label=,leftmargin=*]
-    \itemsep0em 
-    \item \textbf{Pre-Season Programming Learning Group}, Chargers Robotics
-    \item \textit{October 2022 - December 2022}
-    \item \textsc{Oakville, ON}
-    \item Description: Understanding how robotics works while working with one of Ontario’s top
-    award-winning robotics teams.
-
-
-    \skilltag{Control Systems} \skilltag{Programming}
-\end{itemize}
-
-%----------------------------------------------------------
-%Education
-\section{Education}
-\begin{itemize}[label=,leftmargin=*]
-    \itemsep0em 
-    \item \textbf{Ontario Secondary School Diploma}, Garth Webb Secondary School
-    \item \textit{2021 - 2025 (projected)}
-    \item Listed on honour roll in Grade 9.
-\end{itemize}
-
-%----------------------------------------------------------
-%Skills
 \section{Skills}
-\begin{itemize}[label=,leftmargin=*]
-    \itemsep0em 
-    \item \skilltag{Python}
-    \skilltag{C/C++}
-    \skilltag{Web Dev}
-    \skilltag{Server Management}
-\end{itemize}
+\cvitem{Programming}{Python, C/C++, Java, SQL}
+\cvitem{Web Development}{React, HTML, CSS, JavaScript}
+\cvitem{Other}{Git, Windows}
 
-%----------------------------------------------------------
-%Achievements & Awards
-\section{Achievements And Awards}
-\begin{itemize}[label=,leftmargin=*]
-    \itemsep0em 
-    \item \textbf{\nth{1} Place}, PEO-MC High School Coding Contest
-    \item \textit{2021, 2022}
-    \item Description: In Grade 9 and 10.
+\section{Work Experience}
+\cventry{2023--Present}{Volunteer Programming Tutor}{My Code Club}{Mississauga, ON}{}{
+\begin{itemize}
+\item Helped to teach youth aged 4-13 how to build apps.
+\item Used App Inventor to build mobile apps.
 \end{itemize}
+}
+
+\section{Achievements}
+\cventry{2023}{Halton District School Board}{Halton Skills Coding Competition - Representing GWSS}{Burlington, ON}{}{One of two high school students to represent Garth Webb in the competition. Only student from grade 10 selected. Selection was based on student scores in the Canadian Computing Competition.}
+\cventry{2021, 2022}{PEO-Mississauga Chapter}{High School Coding Contest - \nth{1} Place in 2021 and 2022}{Mississauga, ON}{}{}
+\cventry{2021}{My Code Club}{Code-A-Thon 2021 - \nth{1} Place}{Mississauga, ON}{}{}
+\cventry{2020}{PEO-Mississauga Chapter}{Mathletics 2020 - \nth{1} Place}{Mississauga, ON}{}{}
+\cventry{2019}{The Rockhampton Grammar School}{Japanese Award - Top Mark in Grade}{Rockhampton, Australia}{}{Achieved a mark of 100\% in Japanese.}
+
+\section{Activities \& Extracurriculars}
+Tennis (won regional competition in Australia), Swimming, Chess (plays casually), Competitive Programming (won several contests)
+
+\section{Education}
+\cventry{2021--2025}{Ontario Secondary School Diploma}{Garth Webb Secondary School}{Oakville, ON}{}{} {
+\begin{itemize}
+    \item Listed on Honour Roll for high-achieving students in Grade 9.
+\end{itemize}
+}
 
 \end{document}
