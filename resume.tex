@@ -1,60 +1,170 @@
-% By Savir Singh
+% Edited By Savir Singh
 % Savir's Current Resume
 
-\documentclass[10pt,a4paper,sans]{moderncv} 
-\usepackage[super]{nth}
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.4, 27 July 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons 
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[8pt,a4paper]{altacv}
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% 
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font 
+%% folder.
 
 
-% moderncv themes
-\moderncvstyle{banking} % classic, banking, casual, oldstyle, fancy
-\moderncvcolor{blue}
+% Change the page layout if you need to
+\geometry{left=0.35cm,right=8cm,marginparwidth=7cm,marginparsep=0.2cm,top=0.34cm,bottom=0.34cm,footskip=1\baselineskip}
 
-% adjust the page margins
-\usepackage[scale=0.75]{geometry}
+% Change the font if you want to.
 
-% personal data
-\name{Savir}{Singh}
-\address{Oakville, ON}{Canada}
-\email{savirsinghwork@gmail.com}
-\homepage {savirsingh.github.io}
-\social[github]{savirsingh}
+% If using pdflatex:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{Mulberry}{HTML}{5d98f0}
+\definecolor{SlateGrey}{HTML}{2f3252}
+\definecolor{LightGrey}{HTML}{183563}
+\definecolor{HeadingCo}{HTML}{183563}
+\colorlet{heading}{HeadingCo}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\usepackage[colorlinks]{hyperref}
 
 \begin{document}
-\hypersetup{pdftitle={Savir's Résumé}} % <====================================
+\hypersetup{pdftitle={Savir's Résumé}}
 
-\makecvtitle
+\name{Savir Singh}
+\tagline{ }
 
-\section{Summary}
-\cvitem{}{Innovative web and software developer with 3+ years of experience in building full-stack applications. Experienced in competitive programming, having written and won some algorithmic contests as well.}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{savirsinghwork@gmail.com }
+  %\phone{number}
+  %\mailaddress{Oakville, Canada}
+  \location{Oakville, Canada}
+  \printinfo{\faGlobe}{\href{https://savirsingh.github.io}{savirsingh.github.io}}
+  
 
-\section{Skills}
-\cvitem{Programming}{Python, C/C++, Java, SQL}
-\cvitem{Web Development}{React, HTML, CSS, JavaScript}
-\cvitem{Other}{Git, Windows}
-
-\section{Work Experience}
-\cventry{February 2023--Present}{Volunteer Programming Tutor}{My Code Club}{Mississauga, ON}{}{
-\begin{itemize}
-\item Helped to teach youth aged 4-13 how to build apps.
-\item Used App Inventor to build mobile apps.
-\end{itemize}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+%   \orcid{orcid.org/0000-0000-0000-0000}
 }
 
-\section{Achievements}
-\cventry{March 2023}{Halton District School Board}{Halton Skills Coding Competition - Gold Medalist}{Burlington, ON}{}{One of two high school students that represented Garth Webb in the competition. Only student from grade 10 selected. The next step is competing in the Skills Ontario Competition in Toronto during May 2023.}
-\cventry{November 2021 \& 2022}{PEO-Mississauga Chapter}{High School Coding Contest - \nth{1} Place in 2021 and 2022}{Mississauga, ON}{}{}
-\cventry{September 2021}{My Code Club}{Code-A-Thon 2021 - \nth{1} Place}{Mississauga, ON}{}{}
-\cventry{December 2020}{PEO-Mississauga Chapter}{Mathletics 2020 - \nth{1} Place}{Mississauga, ON}{}{}
-\cventry{November 2019}{The Rockhampton Grammar School}{Japanese Award - Top Mark in Grade}{Rockhampton, Australia}{}{Achieved a mark of 100\% in Japanese.}
+%% Make the header extend all the way to the right, if you want. 
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
 
-\section{Activities \& Extracurriculars}
-Tennis (won regional competition in Australia), Swimming, Chess (plays casually), Competitive Programming (won several contests)
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
 
-\section{Education}
-\cventry{2021--2025}{Ontario Secondary School Diploma}{Garth Webb Secondary School}{Oakville, ON}{}{} {
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\cvsection[page1sidebar]{Summary}
+Innovative web and software developer with 3+ years of experience in building full-stack applications.
+Experienced in competitive programming, having written and won some algorithmic contests as well.
+
+
+\cvsection{Work Experience}
+
+\cvevent{Volunteer Assistant Tutor}{My Code Club}{Feb 2023 -- Present}{Mississauga, Canada - Remote}
 \begin{itemize}
-    \item Listed on Honour Roll for high-achieving students in Grade 9.
+\item Helped to teach youth aged 4-13 how to build apps
+\item Used MIT App Inventor to create basic mobile apps.
 \end{itemize}
-}
+
+\divider
+\smallskip
+
+
+
+\cvsection{Projects}
+\cvevent{Forumle}{Forums \& Group Chat for Individuals \& Businesses}{Apr 2023 -- Present}{}
+%%\nocite{*}
+\divider
+
+\cvevent{CCC Solution Collection on GitHub}{Programming Problem Solution Repository}{July 2022 -- Present}{}
+\href{https://github.com/savirsingh/ccc-solutions}{github.com/savirsingh/ccc-solutions}
+
+\divider
+
+\cvevent{Thatformworks}{Make the Backend of HTML Contact \& Reservation Forms Work!}{Aug 2022 -- Jan 2023}{}
+\href{https://thatformworks.pythonanywhere.com}{thatformworks.pythonanywhere.com}
+%%\nocite{*}
+
+\divider
+\smallskip
+
+\cvsection{Achievements}
+\cvevent{Halton Skills Coding Competition - Gold Medalist}{Halton District School Board}{Mar 2023}{Burlington, Canada}
+
+\divider
+
+\cvevent{High School Coding Contest - 1\textsuperscript{st} Place in 2021 \& 2022}{PEO-Mississauga Chapter}{Nov 2021 \& 2022}{Mississauga, Canada - Remote}
+
+\divider
+
+\cvevent{Code-A-Thon 2021 - 1\textsuperscript{st} Place}{My Code Club}{Sep 2021}{Mississauga, Canada - Remote}
+
+\divider
+
+\cvevent{Mathletics 2020 - 1\textsuperscript{st} Place}{PEO-Mississauga Chapter}{Dec 2020}{Mississauga, Canada - Remote}
+
+
+\divider
+
+
+
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the 
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
 
 \end{document}
+
