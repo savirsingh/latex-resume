@@ -1,151 +1,108 @@
-%%%%%%%%%%%%%%%%%
-% This is an sample CV template created using altacv.cls
-% (v1.1.4, 27 July 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
-% 
-%% It may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2003/12/01 or later.
-%%%%%%%%%%%%%%%%
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=0.5in, right=0.5in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fontawesome}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\hyphenpenalty=10000
 
-%% If you need to pass whatever options to xcolor
-\PassOptionsToPackage{dvipsnames}{xcolor}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist{nolistsep}
 
-%% If you are using \orcid or academicons
-%% icons, make sure you have the academicons 
-%% option here, and compile with XeLaTeX
-%% or LuaLaTeX.
-% \documentclass[10pt,a4paper,academicons]{altacv}
-
-%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,normalphoto]{altacv}
-
-\documentclass[8pt,a4paper]{altacv}
-%% AltaCV uses the fontawesome and academicon fonts
-%% and packages. 
-%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
-%% 
-%% Compile with LuaLaTeX for best results. If you
-%% want to use XeLaTeX, you may need to install
-%% Academicons.ttf in your operating system's font 
-%% folder.
-
-
-% Change the page layout if you need to
-\geometry{left=0.2cm,right=8cm,marginparwidth=7cm,marginparsep=0.2cm,top=0.12cm,bottom=0.34cm,footskip=1\baselineskip}
-
-% Change the font if you want to.
-
-% If using pdflatex:
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[default]{lato}
-
-% If using xelatex or lualatex:
-% \setmainfont{Lato}
-
-% Change the colours if you want to
-\definecolor{Mulberry}{HTML}{5d98f0}
-\definecolor{SlateGrey}{HTML}{2f3252}
-\definecolor{LightGrey}{HTML}{183563}
-\definecolor{HeadingCo}{HTML}{183563}
-\colorlet{heading}{HeadingCo}
-\colorlet{accent}{Mulberry}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
-
-% Change the bullets for itemize and rating marker
-% for \cvskill if you want to
-\renewcommand{\itemmarker}{{\small\textbullet}}
-\renewcommand{\ratingmarker}{\faCircle}
-%% sample.bib contains your publications
-\addbibresource{sample.bib}
-
-\usepackage[colorlinks]{hyperref}
+% Custom section formatting
+\titleformat{\section}{\bfseries\large}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1ex}{1ex}
 
 \begin{document}
-\hypersetup{pdftitle={Savir's Résumé}}
+\renewcommand{\labelitemi}{\tiny\textbullet}
+\begin{center}
+    \textbf{\huge Savir Singh}\\
+    \vspace{1ex}
+    \faEnvelope \hspace{0.5ex} \href{mailto:savirsinghwork@gmail.com}{savirsinghwork@gmail.com} \hspace{2ex}
+    \faLinkedin \hspace{0.5ex} \href{https://www.linkedin.com/in/savirss}{in/savirss} \hspace{2ex}
+    \faGithub \hspace{0.5ex} \href{https://github.com/savirsingh}{savirsingh} \hspace{2ex}
+    \faGlobe \hspace{0.5ex} \href{https://www.savirsingh.com}{savirsingh.com}
+\end{center}
 
-%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-% \AtBeginEnvironment{itemize}{\small}
-
-
-%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
-%% You can always just use \marginpar{...} if you do
-%% not need to align the top of the contents to any
-%% \cvsection title in the "main" bar.
-
-\cvsection[page1sidebar]{Summary}
-Innovative web and software developer with 3+ years of experience in building full-stack applications.
-Experienced in competitive programming, having written and won some algorithmic contests as well.
-
-
-\cvsection{Work Experience}
-
-\cvevent{Coding Instructor}{Guessoword Coding}{Jul 2023 -- Aug 2023}{Oakville, Canada - Remote}
+\section*{Experience}
+\textbf{University of Waterloo} \hfill Waterloo, Canada\\
+\textit{Software Engineering \& Research Intern} \hfill \textit{January 2024 -- Present}
 \begin{itemize}
-\item Assisting students in learning topics such as AI \& ML, Python/C++ development, competitive programming, algorithms and data structures, app development.
-\item Providing private and public coding tutoring services.
+    \item Working with a team of PhD students on an innovative \textbf{software security} research project
+    \item Making the interface more \textbf{user-friendly} by building a \textbf{GUI}
+    \item Building a \textbf{static website} to showcase and market the product
+    \item Adding support for \textbf{C++ repositories} to the project
+    \item Building a \textbf{Flask web app} to make interacting with the product \textbf{more efficient}
 \end{itemize}
 
-\divider
+\medskip
 
-\cvevent{Volunteer Assistant Tutor}{My Code Club}{Feb 2023 -- Jun 2023}{Mississauga, Canada - Remote}
+\textbf{DMOJ: Modern Online Judge} \hfill Toronto, Canada\\
+\textit{Problem Setter \& Contest Uploader} \hfill \textit{September 2023 -- Present}
 \begin{itemize}
-\item Helped to teach youth aged 4-13 how to build apps.
-\item Used MIT App Inventor to create basic mobile apps.
+    \item Uploading and setting \textbf{competitive programming} contest problems
+    \item Added Canadian Computing Competition (2024) problems to Canada's \textbf{largest online competitive programming judge}
 \end{itemize}
 
-\divider
-\smallskip
+\medskip
 
-\cvsection{Projects}
-\cvevent{BYTEsense}{AI \& ML Project Built at Hack the North 2023}{Sep 2023}{}
-\href{https://github.com/savirsingh/bytesense-htn-project}
-{github.com/savirsingh/bytesense-htn-project}
+\textbf{American Inn Ozark} \hfill Ozark, USA\\
+\textit{Backend Engineer Intern} \hfill \textit{June 2023 -- September 2023}
+\begin{itemize}
+    \item Built an \textbf{automated system} to handle updating available rooms on the website
+    \item Programmed a \textbf{real-time pinging system} to notify staff of new reservations
+    \item Used a \textbf{MySQL database} to handle hotel reservations efficiently
+    \item Increased room reservations by \textbf{30\%} over one month
+\end{itemize}
 
-\divider
-
-\cvevent{Forumle}{Forums \& Group Chat for Individuals \& Businesses}{Apr 2023 -- Present}{}
-%%\nocite{*}
-\divider
-
-\cvevent{CCC Solution Collection on GitHub}{Programming Problem Solution Repository}{July 2022 -- Present}{}
-\href{https://github.com/savirsingh/ccc-solutions}{github.com/savirsingh/ccc-solutions}
-
-\divider
-\smallskip
-
-\cvsection{Achievements}
-\cvevent{2\textsuperscript{nd} Place -- Best Hack Built on Replit}{Hack the North, Replit}{Sep 2023}{Waterloo, Canada}
-
-\divider
-\cvevent{Halton Skills Coding Competition - Gold Medalist}{Halton District School Board}{Mar 2023}{Burlington, Canada}
-
-\divider
-
-\cvevent{High School Coding Contest - 1\textsuperscript{st} Place in 2021 \& 2022}{PEO-Mississauga Chapter}{Nov 2021 \& 2022}{Mississauga, Canada - Remote}
-
-\divider
-
-\cvevent{Code-A-Thon 2021 - 1\textsuperscript{st} Place}{My Code Club}{Sep 2021}{Mississauga, Canada - Remote}
-
-\divider
-
-\cvevent{Mathletics 2020 - 1\textsuperscript{st} Place}{PEO-Mississauga Chapter}{Dec 2020}{Mississauga, Canada - Remote}
+\section*{Education}
+\textbf{Garth Webb Secondary School} \hfill Oakville, Canada\\
+\textit{Ontario Secondary School Diploma} \hfill \textit{September 2021 -- June 2025}\\
+Executive Leader of Computer Science Club, Executive Leader of Financial Literacy Club, Founder \& President of Competitive Programming Community, Member of Math Club, Member of Physics Club\\
+Listed on academic honour roll for high-achieving students in grades 9-10
 
 
-\divider
+\section*{Skills}
+\textbf{Programming Languages:} Python, C/C++, Java, HTML, CSS, JavaScript\\
+\textbf{Frameworks/Tools:} Linux, Git, Docker, React.js, Flask, Django
 
+\section*{Projects}
+\textbf{Math Contest Repository} \hfill \textit{October 2023 -- Present}\\
+An online \textbf{math contest platform} with 170+ registered users, 215+ community members, 1300+ problems, and over 6000 monthly impressions. We have the support of \textbf{Desmos as a partner}
 
-%% If the NEXT page doesn't start with a \cvsection but you'd
-%% still like to add a sidebar, then use this command on THIS
-%% page to add it. The optional argument lets you pull up the 
-%% sidebar a bit so that it looks aligned with the top of the
-%% main column.
-% \addnextpagesidebar[-1ex]{page3sidebar}
+\medskip
+
+\textbf{BYTEsense} \hfill \textit{September 2023}\\
+A project we developed for \textbf{Hack the North 2023}. BYTEsense is an \textbf{AI-powered tool} which personalizes itself to a user's individual dietary needs. The purpose of the app is to inform the user how a \textbf{new cuisine} may affect them
+
+\medskip
+
+\textbf{Volcano Judge} \hfill \textit{October 2022 - January 2023}\\
+Volcano Judge is an online competitive programming judge designed specifically to aid in learning new \textbf{algorithms and data structures}. Supports and has \textbf{sandboxing for Python and C++}
+
+\section*{Honours \& Awards}
+\textbf{Top 8\% on Canadian Computing Competition (Senior) 2024} \hfill \textit{March 2024}\\
+Achieved a score of \textbf{37/75} and a rank of \textbf{310 out of 3948 participants} in Canada's national programming competition
+
+\medskip
+
+\textbf{3x First Place on PEO Mississauga High School Coding Contest} \hfill \textit{November 2021, 2022, 2023}\\
+I won first place \textbf{three times} in the high school coding contests hosted by Professional Engineers Ontario (PEO) - Mississauga Chapter
+
+\medskip
+
+\textbf{Hack the North 2023 Replit Prize Winner} \hfill \textit{September 2023}\\
+Awarded second place prize from Replit and Hack the North for building BYTEsense. Valued at \$200
+
+\medskip
+
+\textbf{13th Place Provincially - Skills Ontario Coding Competition} \hfill \textit{May 2023}\\
+Ranked \textbf{13th place} in provincial level programming competition. Qualified by \textbf{achieving first place} in board-level competition
+
+\medskip
+
+\textbf{Gold Medalist, Board Representative - Halton Skills Coding Competition} \hfill \textit{March 2023}\\
+Ranked \textbf{first place} in school board programming competition. Qualified to \textbf{represent school board in provincial competition}
 
 \end{document}
