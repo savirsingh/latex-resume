@@ -1,108 +1,160 @@
-\documentclass[a4paper,10pt]{article}
-\usepackage[left=0.5in, right=0.5in, top=0.5in, bottom=0.5in]{geometry}
+% Authored by Savir Singh.
+% live version at savirsingh.com/resume
+
+\documentclass[a4paper,8pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
 \usepackage{enumitem}
+\usepackage{fontspec}
+\setmainfont{PT Serif}
+\usepackage[top=0.6cm, bottom=1.6cm, left=1.2cm, right=1.2cm]{geometry}
 \usepackage{titlesec}
-\usepackage{fontawesome}
-\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
-\hyphenpenalty=10000
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{hyperref}
 
-\pagestyle{empty}
-\setlength{\parindent}{0pt}
-\setlist{nolistsep}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black,
+    linkbordercolor=white,
+}
 
-% Custom section formatting
-\titleformat{\section}{\bfseries\large}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{1ex}{1ex}
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{1em}{0.5em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\textit{Last updated: \today}} % Add last updated date to the footer
+
+\setlist[itemize]{left=0pt, nosep}
 
 \begin{document}
-\renewcommand{\labelitemi}{\tiny\textbullet}
+\color{black!88}
+
 \begin{center}
-    \textbf{\huge Savir Singh}\\
-    \vspace{1ex}
-    \faEnvelope \hspace{0.5ex} \href{mailto:savirsinghwork@gmail.com}{savirsinghwork@gmail.com} \hspace{2ex}
-    \faLinkedin \hspace{0.5ex} \href{https://www.linkedin.com/in/savirss}{in/savirss} \hspace{2ex}
-    \faGithub \hspace{0.5ex} \href{https://github.com/savirsingh}{savirsingh} \hspace{2ex}
-    \faGlobe \hspace{0.5ex} \href{https://www.savirsingh.com}{savirsingh.com}
+    {\LARGE \textbf{Savir Singh}} \\
+    \vspace{2mm}
+    \faGlobe \hspace{1mm} \href{https://savirsingh.com}{savirsingh.com} \hspace{8mm}
+    \faGithub \hspace{1mm} \href{https://github.com/savirsingh}{savirsingh} \hspace{8mm}
+    \faLinkedin \hspace{1mm} \href{https://linkedin.com/in/savirss}{in/savirss} \hspace{8mm}
+    \faEnvelope \hspace{1mm} \href{mailto:savirsinghwork@gmail.com}{savirsinghwork@gmail.com}
 \end{center}
 
-\section*{Experience}
-\textbf{University of Waterloo} \hfill Waterloo, Canada\\
-\textit{Software Engineering \& Research Intern} \hfill \textit{January 2024 -- Present}
-\begin{itemize}
-    \item Working with a team of PhD students on an innovative \textbf{software security} research project
-    \item Making the interface more \textbf{user-friendly} by building a \textbf{GUI}
-    \item Building a \textbf{static website} to showcase and market the product
-    \item Adding support for \textbf{C++ repositories} to the project
-    \item Building a \textbf{Flask web app} to make interacting with the product \textbf{more efficient}
+\section*{EDUCATION}
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{\makebox[0pt][l]{Garth Webb Secondary School}} & \textit{Oakville, Canada} \\
+\end{tabularx}
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textit{Ontario Secondary School Diploma} & \textit{2021 -- 2025} \\
+\end{tabularx}
+\begin{itemize}[label=\textbullet, left=0em]
+    \item President of the Computer Science Club, Executive Leader of the Investment Club
+    \item Member of the Math, Physics, Tennis Clubs
+    \item Wrote all CEMC contests, SIN/OAPT contests, and participated in FRC 5409 robotics learning sessions
 \end{itemize}
 
-\medskip
-
-\textbf{DMOJ: Modern Online Judge} \hfill Toronto, Canada\\
-\textit{Problem Setter \& Contest Uploader} \hfill \textit{September 2023 -- Present}
-\begin{itemize}
-    \item Uploading and setting \textbf{competitive programming} contest problems
-    \item Added Canadian Computing Competition (2024) problems to Canada's \textbf{largest online competitive programming judge}
+\section*{EXPERIENCE}
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{\makebox[0pt][l]{Scaled Foundations}} & \textit{Kirkland, USA} \\
+\end{tabularx}
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textit{Software Engineer Intern, AI Model Research} & \textit{September 2024 -- Present} \\
+\end{tabularx}
+\begin{itemize}[label=\textbullet, left=0em]
+    \item Researching and contributing models to improve simulator technology
 \end{itemize}
 
-\medskip
+\vspace{1.2mm}
 
-\textbf{American Inn Ozark} \hfill Ozark, USA\\
-\textit{Backend Engineer Intern} \hfill \textit{June 2023 -- September 2023}
-\begin{itemize}
-    \item Built an \textbf{automated system} to handle updating available rooms on the website
-    \item Programmed a \textbf{real-time pinging system} to notify staff of new reservations
-    \item Used a \textbf{MySQL database} to handle hotel reservations efficiently
-    \item Increased room reservations by \textbf{30\%} over one month
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{\makebox[0pt][l]{University of Waterloo}} & \textit{Waterloo, Canada} \\
+\end{tabularx}
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textit{Software Engineer Intern \& Student Researcher} & \textit{January 2024 -- April 2024} \\
+\end{tabularx}
+\begin{itemize}[label=\textbullet, left=0em]
+    \item Worked with a team of PhD students on a software security project, FuzzSlice
+    \item Added some support for C++ repositories to the project
+    \item Built a Flask web app to make interacting with the product more efficient
+    \item Produced a video demo of FuzzSlice using the GUI
+    \item Video demo and GUI were presented in the ICSE 2024 Research Track
 \end{itemize}
 
-\section*{Education}
-\textbf{Garth Webb Secondary School} \hfill Oakville, Canada\\
-\textit{Ontario Secondary School Diploma} \hfill \textit{September 2021 -- June 2025}\\
-Executive Leader of Computer Science Club, Executive Leader of Financial Literacy Club, Founder \& President of Competitive Programming Community, Member of Math Club, Member of Physics Club\\
-Listed on academic honour roll for high-achieving students in grades 9-10
+\vspace{1.2mm}
 
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{\makebox[0pt][l]{American Inn Ozark}} & \textit{Ozark, USA} \\
+\end{tabularx}
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textit{Backend Engineer Intern} & \textit{June 2023 -- September 2023} \\
+\end{tabularx}
+\begin{itemize}[label=\textbullet, left=0em]
+    \item Built an automated system to handle updating available rooms on a website
+    \item Programmed a real-time pinging application to notify staff of new reservations
+\end{itemize}
 
-\section*{Skills}
-\textbf{Programming Languages:} Python, C/C++, Java, HTML, CSS, JavaScript\\
-\textbf{Frameworks/Tools:} Linux, Git, Docker, React.js, Flask, Django
+\section*{PROJECTS}
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{\makebox[0pt][l]{Math Contest Repository}} & \textit{October 2023 -- Present} \\
+\faGlobe \hspace{1mm} \href{https://mathcontestrepository.pythonanywhere.com}{mathcontestrepository.pythonanywhere.com} \\
+\end{tabularx}
+\noindent
+An online math contest platform boasts over 290 registered users, more than 320 community members, and 1400+ problems, generating over 7000 monthly impressions. Support from Desmos as a partner enhances the platform's credibility. The project was fully developed and managed, overseeing a team of developers and business students who contributed to its maintenance.
 
-\section*{Projects}
-\textbf{Math Contest Repository} \hfill \textit{October 2023 -- Present}\\
-An online \textbf{math contest platform} with 170+ registered users, 215+ community members, 1300+ problems, and over 6000 monthly impressions. We have the support of \textbf{Desmos as a partner}
+\vspace{1.2mm}
 
-\medskip
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{\makebox[0pt][l]{Clonio AI}} & \textit{May 2024 -- Present} \\
+\faAppStore \hspace{1mm} \href{https://apps.apple.com/us/app/clonio-ai/id6633411608}{Clonio AI} \\
+\end{tabularx}
+\noindent
+An iOS app that can transform people into AI chatbots based on DM/text conversation history. At its peak, this application ranked 64th on the US App Store for paid apps under the "Productivity" section. It attracted 200+ downloads in the first week alone.
 
-\textbf{BYTEsense} \hfill \textit{September 2023}\\
-A project we developed for \textbf{Hack the North 2023}. BYTEsense is an \textbf{AI-powered tool} which personalizes itself to a user's individual dietary needs. The purpose of the app is to inform the user how a \textbf{new cuisine} may affect them
+\vspace{1.2mm}
 
-\medskip
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{\makebox[0pt][l]{BYTEsense}} & \textit{September 2023} \\
+\faGithub \hspace{1mm} \href{https://github.com/savirsingh/bytesense-htn-project}{savirsingh/bytesense-htn-project} \\
+\end{tabularx}
+\noindent
+A project developed for Hack the North 2023, BYTEsense is an AI-powered tool utilizing OpenAI and Cohere APIs to personalize dietary recommendations based on individual user needs. The app informs users about how different cuisines may affect them. Received a \$200 prize from Replit for building the app on their platform.
 
-\textbf{Volcano Judge} \hfill \textit{October 2022 - January 2023}\\
-Volcano Judge is an online competitive programming judge designed specifically to aid in learning new \textbf{algorithms and data structures}. Supports and has \textbf{sandboxing for Python and C++}
+\vspace{1.2mm}
 
-\section*{Honours \& Awards}
-\textbf{Top 8\% on Canadian Computing Competition (Senior) 2024} \hfill \textit{March 2024}\\
-Achieved a score of \textbf{37/75} and a rank of \textbf{310 out of 3948 participants} in Canada's national programming competition
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{\makebox[0pt][l]{Volcano Judge}} & \textit{October 2022 -- January 2023} \\
+\faGithub \hspace{1mm} \href{https://github.com/savirsingh/volcano-judge}{savirsingh/volcano-judge} \\
+\end{tabularx}
+\noindent
+Volcano Judge is an online competitive programming judge (similar to LeetCode or Codeforces) designed specifically
+to aid in learning new algorithms and data structures. Supports and has sandboxing for Python and C++.
 
-\medskip
+\section*{HONOURS \& AWARDS}
+\noindent \textbf{Top 8\% (Rank 310/3948) \& Score of 37/75}, Canadian Computing Competition (Senior) \hfill \textit{2024} \\
+\textbf{3x First Place \& Internship Invitee}, PEO Mississauga Chapter High School Coding Contest \hfill \textit{2021, 2022, 2023} \\
+\textbf{Second Place Prize From Replit}, Hack the North '23 \hfill \textit{2023} \\
+\textbf{13th Place Provincially}, Skills Ontario Coding Competition \hfill \textit{2023} \\
+\textbf{Gold Medalist, Board Representative}, Halton Skills Coding Competition \hfill \textit{2023}
 
-\textbf{3x First Place on PEO Mississauga High School Coding Contest} \hfill \textit{November 2021, 2022, 2023}\\
-I won first place \textbf{three times} in the high school coding contests hosted by Professional Engineers Ontario (PEO) - Mississauga Chapter
-
-\medskip
-
-\textbf{Hack the North 2023 Replit Prize Winner} \hfill \textit{September 2023}\\
-Awarded second place prize from Replit and Hack the North for building BYTEsense. Valued at \$200
-
-\medskip
-
-\textbf{13th Place Provincially - Skills Ontario Coding Competition} \hfill \textit{May 2023}\\
-Ranked \textbf{13th place} in provincial level programming competition. Qualified by \textbf{achieving first place} in board-level competition
-
-\medskip
-
-\textbf{Gold Medalist, Board Representative - Halton Skills Coding Competition} \hfill \textit{March 2023}\\
-Ranked \textbf{first place} in school board programming competition. Qualified to \textbf{represent school board in provincial competition}
+\section*{SKILLS}
+\textbf{Languages:} Python, C/C++, Java, HTML, CSS, JavaScript \\
+\textbf{Frameworks/Tools:} Flask, React.js, Git, Linux, Docker
 
 \end{document}
