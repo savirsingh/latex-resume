@@ -1,6 +1,6 @@
 # LaTeX Résumé
 
-![preview](https://github.com/savirsingh/latex-resume/blob/main/resume-screenshot.png)
+<img width="1013" height="502" alt="image" src="https://github.com/user-attachments/assets/3894a1f3-9f71-4d98-8bdb-706cacece2b3" />
 
 ### My free, open-source résumé.
 
