@@ -1,160 +1,293 @@
 % Authored by Savir Singh.
 % live version at savirsingh.com/resume
 
-\documentclass[a4paper,8pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{xcolor}
-\usepackage{fontawesome5}
-\usepackage{enumitem}
-\usepackage{fontspec}
-\setmainfont{PT Serif}
-\usepackage[top=0.6cm, bottom=1.6cm, left=1.2cm, right=1.2cm]{geometry}
-\usepackage{titlesec}
-\usepackage{fancyhdr}
-\usepackage{multicol}
-\usepackage{tabularx}
-\usepackage{hyperref}
+\documentclass[11pt,letterpaper]{article}
 
+\usepackage[margin=0.28in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{setspace}
+
+% ---------- FONT ----------
+% Modern soft font
+\setmainfont{Lato}
+\newfontfamily\headingfont{Inter SemiBold}
+
+% ---------- COLORS ----------
+\definecolor{text}{HTML}{1F2937}
+\definecolor{muted}{HTML}{6B7280}
+\definecolor{accent}{HTML}{111827}
+
+% ---------- HYPERREF ----------
 \hypersetup{
     colorlinks=true,
-    linkcolor=black,
-    urlcolor=black,
-    citecolor=black,
-    linkbordercolor=white,
+    urlcolor=accent,
+    linkcolor=accent
 }
 
-\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{1em}{0.5em}
+% ---------- SPACING ----------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagenumbering{gobble}
 
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\fancyfoot[C]{\textit{Last updated: \today}} % Add last updated date to the footer
+\titleformat{\section}
+{\headingfont\large\color{accent}}
+{}
+{0em}
+{}
+[\vspace{-0.2em}\titlerule]
 
-\setlist[itemize]{left=0pt, nosep}
+\titlespacing{\section}{0pt}{0.7em}{0.45em}
+
+\setlist[itemize]{
+    leftmargin=1.6em,
+    itemsep=0.12em,
+    topsep=0.15em,
+    parsep=0em,
+    partopsep=0em
+}
+
+% ---------- CUSTOM ----------
+\newcommand{\resumeItem}[1]{
+    \item \small{#1}
+}
+
+\newcommand{\skilltag}[1]{
+    {\footnotesize\textcolor{muted}{#1}}
+}
+
+\newcommand{\entry}[4]{
+\vspace{0.15em}
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+{\textbf{#1}} & {\small \textcolor{muted}{#2}} \\
+{\small\textit{#3}} & {\small \textcolor{muted}{#4}}
+\end{tabularx}
+}
+
+\usepackage{etoolbox}
+
+\newcommand{\project}[5]{
+\vspace{0.2em}
+
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+{\textbf{#1}} & {\small \textcolor{muted}{#2}} \\
+
+\ifstrempty{#3}
+{}
+{
+{\small #3} & {\footnotesize \textcolor{muted}{#4}} \\
+}
+
+\end{tabularx}
+
+{\small #5}
+}
 
 \begin{document}
-\color{black!88}
+
+% =========================
+% HEADER
+% =========================
 
 \begin{center}
-    {\LARGE \textbf{Savir Singh}} \\
-    \vspace{2mm}
-    \faGlobe \hspace{1mm} \href{https://savirsingh.com}{savirsingh.com} \hspace{8mm}
-    \faGithub \hspace{1mm} \href{https://github.com/savirsingh}{savirsingh} \hspace{8mm}
-    \faLinkedin \hspace{1mm} \href{https://linkedin.com/in/savirss}{in/savirss} \hspace{8mm}
-    \faEnvelope \hspace{1mm} \href{mailto:savirsinghwork@gmail.com}{savirsinghwork@gmail.com}
+
+{\fontsize{18}{24}\selectfont \headingfont Savir Singh}
+
+\vspace{0.25em}
+
+{\small
+\faHome \hspace{0.25em}
+{Toronto, ON}
+\hspace{1.2em}
+\faEnvelope \hspace{0.25em}
+\href{mailto:me@savirsingh.com}{me@savirsingh.com}
+\hspace{1.2em}
+\faGlobe \hspace{0.25em}
+\href{https://savirsingh.com}{savirsingh.com}
+\hspace{1.2em}
+\faGithub \hspace{0.25em}
+\href{https://github.com/savirsingh}{savirsingh}
+\hspace{1.2em}
+\faLinkedin \hspace{0.25em}
+\href{https://linkedin.com/in/savirss}{in/savirss}
+}
+
+\vspace{-0.35em}
+
 \end{center}
 
-\section*{EDUCATION}
-\noindent
-\begin{tabularx}{\textwidth}{@{}X r@{}}
-\textbf{\makebox[0pt][l]{Garth Webb Secondary School}} & \textit{Oakville, Canada} \\
-\end{tabularx}
-\noindent
-\begin{tabularx}{\textwidth}{@{}X r@{}}
-\textit{Ontario Secondary School Diploma} & \textit{2021 -- 2025} \\
-\end{tabularx}
-\begin{itemize}[label=\textbullet, left=0em]
-    \item President of the Computer Science Club, Executive Leader of the Investment Club
-    \item Member of the Math, Physics, Tennis Clubs
-    \item Wrote all CEMC contests, SIN/OAPT contests, and participated in FRC 5409 robotics learning sessions
+% =========================
+% EDUCATION
+% =========================
+
+\section*{Education}
+
+\entry
+{University of Toronto}
+{Toronto, ON}
+{HBSc., Computer Science \& Mathematics, Minor in Statistics | CS GPA: 3.85 / 4.00}
+{2025 -- 2029}
+
+\vspace{-0.35em}
+
+\begin{itemize}
+    \resumeItem{Coursework: Advanced-Level Analysis \& Abstract Algebra, Intro to Computer Science, Statistics \& Data Science, Reasoning for Computer Science, Microeconomics, Linguistics, Management}
 \end{itemize}
 
-\section*{EXPERIENCE}
-\noindent
-\begin{tabularx}{\textwidth}{@{}X r@{}}
-\textbf{\makebox[0pt][l]{Scaled Foundations}} & \textit{Kirkland, USA} \\
-\end{tabularx}
-\noindent
-\begin{tabularx}{\textwidth}{@{}X r@{}}
-\textit{Software Engineer Intern, AI Model Research} & \textit{September 2024 -- Present} \\
-\end{tabularx}
-\begin{itemize}[label=\textbullet, left=0em]
-    \item Researching and contributing models to improve simulator technology
+% =========================
+% EXPERIENCE
+% =========================
+
+\section*{Experience}
+
+\entry
+{KPMG}
+{Toronto, ON}
+{Security \& Compliance Analyst Intern}
+{May 2026 -- Present}
+
+\vspace{-0.55em}
+
+\begin{itemize}
+    \resumeItem{Working in Digital Security Group's policy and platform security teams}
+    \resumeItem{Developing AI bot to answer client queries, trained on security assessment reports and database of old queries}
+    \resumeItem{Refining databases to optimize Retrieval-Augmented Generation (RAG) process}
 \end{itemize}
 
-\vspace{1.2mm}
+\vspace{0.15em}
 
-\noindent
-\begin{tabularx}{\textwidth}{@{}X r@{}}
-\textbf{\makebox[0pt][l]{University of Waterloo}} & \textit{Waterloo, Canada} \\
-\end{tabularx}
-\noindent
-\begin{tabularx}{\textwidth}{@{}X r@{}}
-\textit{Software Engineer Intern \& Student Researcher} & \textit{January 2024 -- April 2024} \\
-\end{tabularx}
-\begin{itemize}[label=\textbullet, left=0em]
-    \item Worked with a team of PhD students on a software security project, FuzzSlice
-    \item Added some support for C++ repositories to the project
-    \item Built a Flask web app to make interacting with the product more efficient
-    \item Produced a video demo of FuzzSlice using the GUI
-    \item Video demo and GUI were presented in the ICSE 2024 Research Track
+\entry
+{General Robotics}
+{Kirkland, WA}
+{Software Engineer Intern — AI Model Research}
+{Sep 2024 -- Dec 2024}
+
+\vspace{-0.55em}
+
+\begin{itemize}
+    \resumeItem{Expanded robotic perception stack with 3 ML models for action recognition and visual odometry}
+    \resumeItem{Improved visual odometry performance by 15\% using Princeton DPVO pipeline integration}
+    \resumeItem{Built classification/data quality systems for robotic sensor datasets and model selection workflows}
 \end{itemize}
 
-\vspace{1.2mm}
+\vspace{0.15em}
 
-\noindent
-\begin{tabularx}{\textwidth}{@{}X r@{}}
-\textbf{\makebox[0pt][l]{American Inn Ozark}} & \textit{Ozark, USA} \\
-\end{tabularx}
-\noindent
-\begin{tabularx}{\textwidth}{@{}X r@{}}
-\textit{Backend Engineer Intern} & \textit{June 2023 -- September 2023} \\
-\end{tabularx}
-\begin{itemize}[label=\textbullet, left=0em]
-    \item Built an automated system to handle updating available rooms on a website
-    \item Programmed a real-time pinging application to notify staff of new reservations
+\entry
+{University of Waterloo}
+{Waterloo, ON}
+{Research Assistant \& Software Intern}
+{Jan 2024 -- Apr 2024}
+
+\vspace{-0.55em}
+
+\begin{itemize}
+    \resumeItem{Only high school intern accepted into software security research lab (\href{https://fuzzslice.com/}{FuzzSlice}) under Dr. Nagappan}
+    \resumeItem{Added C++ repository support to FuzzSlice, increasing dataset coverage by 30\%}
+    \resumeItem{Built Flask + React demo platform showcased at ICSE 2024 to 2,000+ attendees}
 \end{itemize}
 
-\section*{PROJECTS}
-\noindent
-\begin{tabularx}{\textwidth}{@{}X r@{}}
-\textbf{\makebox[0pt][l]{Math Contest Repository}} & \textit{October 2023 -- Present} \\
-\faGlobe \hspace{1mm} \href{https://mathcontestrepository.pythonanywhere.com}{mathcontestrepository.pythonanywhere.com} \\
+% =========================
+% PROJECTS
+% =========================
+
+\section*{Selected Projects}
+
+\project
+{Clonio AI}
+{2024 -- Present}
+{\faAppStore \hspace{0.35em}\href{https://apps.apple.com/us/app/clonio-ai/id6633411608}{App Store}}
+{Python • Flask • SwiftUI • LLMs • Gemini • NLP • Data Pipelines}
+{
+\begin{itemize}
+    \resumeItem{Deployed AI personality cloning platform with Python Flask backend, iOS + web clients, and custom inference pipelines}
+    \resumeItem{Scaled to 1M+ processed messages, featured in 10+ media outlets, received \$3,500 Ontario government grant for development}
+    \resumeItem{Reached Top 25 Productivity ranking on the App Store in the United States, Canada, and Switzerland}
+\end{itemize}
+}
+
+\project
+{Math Contest Repository}
+{2023 -- Present}
+{\faGlobe \hspace{0.35em}\href{https://mathcontestrepository.pythonanywhere.com}{Live Platform}}
+{Python • Flask • Full Stack • Data Modeling}
+{
+\begin{itemize}
+    \resumeItem{Built large-scale online math contest platform with 500+ users, 6,000+ solution submissions, and 1,400+ problems}
+    \resumeItem{Designed leaderboard systems, automated problem type tagging pipelines, and personalized problem recommendations}
+    \resumeItem{Scaled platform to 10K+ monthly impressions and partnered with Desmos for premium online calculator integration}
+\end{itemize}
+}
+
+\project
+{Volcano Judge}
+{2022 -- 2023}
+{\faGithub \hspace{0.35em}\href{https://github.com/savirsingh/volcano-judge}{GitHub}}
+{C++ • Python • Sandboxing • Distributed Evaluation}
+{
+\begin{itemize}
+    \resumeItem{Developed competitive programming online judge for automated code evaluation, supports Python 3 and C++ 20}
+    \resumeItem{Implemented isolated Python sandboxing system and REST APIs for scalable grading workflows}
+\end{itemize}
+}
+
+\project
+{Independent Research}
+{2024 -- Present}
+{}
+{}
+{
+\begin{itemize}
+    \resumeItem{Researching odd perfect numbers and independently derived Euler structural characterization}
+    \resumeItem{Collaborated with Carnegie Mellon professor on heuristic algorithms for efficient addition-subtraction chain generation}
+\end{itemize}
+}
+
+% =========================
+% SKILLS
+% =========================
+
+\section*{Technical Skills}
+
+\small
+
+\textbf{Languages:}
+Python, C++, Java, SQL, Swift, JavaScript, R, HTML/CSS
+
+\vspace{0.18em}
+
+\textbf{Machine Learning:}
+PyTorch, TensorFlow, scikit-learn, NLP, LLMs (incl. APIs), Statistical Modeling, Reinforcement Learning
+
+\vspace{0.18em}
+
+\textbf{Systems/SWE:}
+Algorithms \& Data Structures, Linux, Git, Docker, Flask, Django, React, ServiceNow, Distributed Systems
+
+% =========================
+% ACHIEVEMENTS
+% =========================
+
+\section*{Achievements}
+
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+
+\small \textbf{Top 5\%}, Canadian Computing Competition Senior (2024-2025)
+&
+\small \textbf{3x First Place}, PEO Programming Competition (2021-2023)
+
+\\[0.2em]
+
+\small \textbf{\$200 Replit Prize Winner}, Hack the North 2023
+&
+\small \textbf{Gold \& Silver Medalist}, Halton Skills Coding (2023, 2025)
+
 \end{tabularx}
-\noindent
-An online math contest platform boasts over 290 registered users, more than 320 community members, and 1400+ problems, generating over 7000 monthly impressions. Support from Desmos as a partner enhances the platform's credibility. The project was fully developed and managed, overseeing a team of developers and business students who contributed to its maintenance.
-
-\vspace{1.2mm}
-
-\noindent
-\begin{tabularx}{\textwidth}{@{}X r@{}}
-\textbf{\makebox[0pt][l]{Clonio AI}} & \textit{May 2024 -- Present} \\
-\faAppStore \hspace{1mm} \href{https://apps.apple.com/us/app/clonio-ai/id6633411608}{Clonio AI} \\
-\end{tabularx}
-\noindent
-An iOS app that can transform people into AI chatbots based on DM/text conversation history. At its peak, this application ranked 64th on the US App Store for paid apps under the "Productivity" section. It attracted 200+ downloads in the first week alone.
-
-\vspace{1.2mm}
-
-\noindent
-\begin{tabularx}{\textwidth}{@{}X r@{}}
-\textbf{\makebox[0pt][l]{BYTEsense}} & \textit{September 2023} \\
-\faGithub \hspace{1mm} \href{https://github.com/savirsingh/bytesense-htn-project}{savirsingh/bytesense-htn-project} \\
-\end{tabularx}
-\noindent
-A project developed for Hack the North 2023, BYTEsense is an AI-powered tool utilizing OpenAI and Cohere APIs to personalize dietary recommendations based on individual user needs. The app informs users about how different cuisines may affect them. Received a \$200 prize from Replit for building the app on their platform.
-
-\vspace{1.2mm}
-
-\noindent
-\begin{tabularx}{\textwidth}{@{}X r@{}}
-\textbf{\makebox[0pt][l]{Volcano Judge}} & \textit{October 2022 -- January 2023} \\
-\faGithub \hspace{1mm} \href{https://github.com/savirsingh/volcano-judge}{savirsingh/volcano-judge} \\
-\end{tabularx}
-\noindent
-Volcano Judge is an online competitive programming judge (similar to LeetCode or Codeforces) designed specifically
-to aid in learning new algorithms and data structures. Supports and has sandboxing for Python and C++.
-
-\section*{HONOURS \& AWARDS}
-\noindent \textbf{Top 8\% (Rank 310/3948) \& Score of 37/75}, Canadian Computing Competition (Senior) \hfill \textit{2024} \\
-\textbf{3x First Place \& Internship Invitee}, PEO Mississauga Chapter High School Coding Contest \hfill \textit{2021, 2022, 2023} \\
-\textbf{Second Place Prize From Replit}, Hack the North '23 \hfill \textit{2023} \\
-\textbf{13th Place Provincially}, Skills Ontario Coding Competition \hfill \textit{2023} \\
-\textbf{Gold Medalist, Board Representative}, Halton Skills Coding Competition \hfill \textit{2023}
-
-\section*{SKILLS}
-\textbf{Languages:} Python, C/C++, Java, HTML, CSS, JavaScript \\
-\textbf{Frameworks/Tools:} Flask, React.js, Git, Linux, Docker
 
 \end{document}
